@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h3>TD From Hero</h3>
+  <form (ngSubmit)="createHero()" #f="ngForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name Hero</label>
+      <input
+        type="text"
+        class="form-control"
+        name="name"
+        id="name"
+        ngModel
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="alterEgo" class="form-label">Alter Ego Hero</label>
+      <input
+        type="text"
+        class="form-control"
+        name="alterEgo"
+        ngModel
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="power" class="form-label">Power</label>
+      <select
+        class="form-select"
+        name="power"
+        aria-label="Default select example"
+        required
+        ngModel
+      >
+        <option selected>Select Hero Power</option>
+        <option value="1">Flying</option>
+        <option value="2">Mindreader</option>
+        <option value="3">Ubiquity</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="enemy" class="form-label">Enemy Hero</label>
+      <input
+        type="text"
+        class="form-control"
+        name="enemy"
+        ngModel
+        required
+        maxlength="10"
+        aria-describedby="planetHelp"
+      />
+      <div id="enemyHelp" class="form-text">Max 10 characters</div>
+    </div>
+    <div class="mb-3">
+      <label for="planet" class="form-label">Planet Hero</label>
+      <input
+        ngModel
+        type="text"
+        class="form-control"
+        name="planet"
+        aria-describedby="planetHelp"
+        required
+        minlength="5"
+      />
+      <div id="planetHelp" class="form-text">Min 5 characters</div>
+    </div>
+    <div class="mb-3">
+      <label for="weakness" class="form-label">Weakness</label>
+      <input type="text" class="form-control" name="weakness" ngModel />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Hero</button>
+  </form>
+  <hr />
+</div>
