@@ -32,9 +32,9 @@
         ngModel
       >
         <option selected>Select Hero Power</option>
-        <option value="1">Flying</option>
-        <option value="2">Mindreader</option>
-        <option value="3">Ubiquity</option>
+        <option>Flying</option>
+        <option>Mindreader</option>
+        <option>Ubiquity</option>
       </select>
     </div>
     <div class="mb-3">
@@ -67,7 +67,9 @@
       <label for="weakness" class="form-label">Weakness</label>
       <input type="text" class="form-control" name="weakness" ngModel />
     </div>
-    <button type="submit" class="btn btn-primary">Create Hero</button>
+    <button type="submit" [disabled]="f.invalid" class="btn btn-primary">
+      Create Hero
+    </button>
   </form>
   <hr />
 </div>
