@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive',
@@ -13,9 +13,9 @@ export class ReactiveComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = new FormGroup({
-      name: new FormControl(null),
-      alterEgo: new FormControl(null),
-      power: new FormControl(null),
+      name: new FormControl(null, Validators.required),
+      alterEgo: new FormControl(null, Validators.required),
+      power: new FormControl(null, Validators.required),
       enemy: new FormControl(null),
       planet: new FormControl(null),
       weakness: new FormControl(null),
@@ -25,4 +25,6 @@ export class ReactiveComponent implements OnInit {
   createHero() {
     console.log(this.form);
   }
+
+  // addPower(form) {}
 }

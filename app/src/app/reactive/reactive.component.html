@@ -24,19 +24,16 @@
     </div>
     <div class="mb-3">
       <label for="power" class="form-label">Power</label>
-      <select
-        class="form-select"
+      <button type="submit" class="btn btn-primary m-3">Add Power</button>
+      <input
+        class="form-control"
         name="power"
-        aria-label="Default select example"
         required
         formControlName="power"
-      >
-        <option selected>Select Hero Power</option>
-        <option>Flying</option>
-        <option>Mindreader</option>
-        <option>Ubiquity</option>
-      </select>
+        placeholder="Insert Hero Power"
+      />
     </div>
+
     <div class="mb-3">
       <label for="enemy" class="form-label">Enemy Hero</label>
       <input
@@ -50,29 +47,9 @@
       />
       <div id="enemyHelp" class="form-text">Max 10 characters</div>
     </div>
-    <div class="mb-3">
-      <label for="planet" class="form-label">Planet Hero</label>
-      <input
-        formControlName="planetHero"
-        type="text"
-        class="form-control"
-        name="planet"
-        aria-describedby="planetHelp"
-        required
-        minlength="5"
-      />
-      <div id="planetHelp" class="form-text">Min 5 characters</div>
-    </div>
-    <div class="mb-3">
-      <label for="weakness" class="form-label">Weakness</label>
-      <input
-        type="text"
-        class="form-control"
-        name="weakness"
-        formControlName="weakness"
-      />
-    </div>
-    <button type="submit" class="btn btn-primary">Create Hero</button>
   </form>
   <hr />
 </div>
+
+<!-- aggiungere al power button
+(click)="addPower(form)" -->
