@@ -1,55 +1,17 @@
 <div class="container mt-4">
-  <h3>Reactive From Hero</h3>
+  <h3 class="text-center">New Hero Is Ready</h3>
 
-  <form (ngSubmit)="createHero()" [formGroup]="form">
-    <div class="mb-3">
-      <label for="name" class="form-label">Name Hero</label>
-      <input
-        type="text"
-        class="form-control"
-        name="name"
-        formControlName="name"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="alterEgo" class="form-label">Alter Ego Hero</label>
-      <input
-        type="text"
-        class="form-control"
-        name="alterEgo"
-        formControlName="AlterEgo"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="power" class="form-label">Power</label>
-      <button type="submit" class="btn btn-primary m-3">Add Power</button>
-      <input
-        class="form-control"
-        name="power"
-        required
-        formControlName="power"
-        placeholder="Insert Hero Power"
-      />
-    </div>
-
-    <div class="mb-3">
-      <label for="enemy" class="form-label">Enemy Hero</label>
-      <input
-        type="text"
-        class="form-control"
-        name="enemy"
-        formControlName="enemyHero"
-        required
-        maxlength="10"
-        aria-describedby="planetHelp"
-      />
-      <div id="enemyHelp" class="form-text">Max 10 characters</div>
-    </div>
-  </form>
-  <hr />
+  <tr *ngFor="let item of superHero">
+    <th scope="row">{{ item.name }}</th>
+    <td>{{}}</td>
+    <td>{({}}</td>
+    <td>{{}}</td>
+    <td>{{}}</td>
+    <td>{{}}</td>
+    <td></td>
+  </tr>
 </div>
 
-<!-- aggiungere al power button
+  <!-- aggiungere al power button
 (click)="addPower(form)" -->
+</div>
